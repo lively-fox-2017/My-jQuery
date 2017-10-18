@@ -6,7 +6,10 @@ function validateEmail(email) {
 function validate() {
   $("#result").text("");
   var email = $("#email").val();
-  if (validateEmail(email)) {
+  var kosong = document.forms["kotak"]["box"].value
+  if(kosong == ""){
+     $("#email").css("border", "3px solid black");
+  } else if (validateEmail(email)) {
     $("#result").text(email + " is valid");
     $("#result").css("color", "green");
     $("#email").css("color", "green");
