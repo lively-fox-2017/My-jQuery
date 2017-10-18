@@ -8,19 +8,5 @@
     <input type="email" name="email" id="email" value=""><span id="info" style="padding-left: 10px"></span>
   </body>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('#email').on('keypress change', function(){
-        if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test($('#email').val())) {
-          $("#email").css("border", "2px solid red");
-          $("#email").css("border-radius", "6px");
-          $("#info").html("Email address in not valid");
-        } else {
-          $("#email").css("border", "2px solid blue");
-          $("#email").css("border-radius", "6px");
-          $("#info").html("Email is valid");
-        }
-      })
-    })
-  </script>
+  <script src="lib/validate-email.js" charset="utf-8"></script>
 </html>
