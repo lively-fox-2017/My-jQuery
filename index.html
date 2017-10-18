@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My jQuery Plugin</title>
+  <style>
+    input {
+      border-style: solid;
+    }
+    .error {
+      color: #ff0000;
+    }
+    .red-bordered {
+      border-color: #ff0000;
+    }
+    .green-bordered {
+      border-color: #00ff00;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="email-box">
+    <input type="text" class="email" name="email" placeholder="Enter your email" autocomplete="off" autofocus>
+    <span class="error hidden">Email address is not valid</span>
+  </div>
+
+</body>
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="lib/validate-email.js"></script>
+
+<script>
+
+  $(document).ready(function() {
+
+    // Validate email
+    $(".email-box .email").keyup(function() {
+
+      if ($(this).isEmail()) {
+        $(".email-box .error").addClass("hidden");
+        $(this).removeClass("red-bordered");
+        $(this).addClass("green-bordered");
+      } else {
+        $(".email-box .error").removeClass("hidden");
+        $(this).removeClass("green-bordered");
+        $(this).addClass("red-bordered");
+      }
+
+    });
+
+  });
+
+</script>
+
+</html>
