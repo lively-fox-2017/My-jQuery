@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Email Validation Test</title>
+  </head>
+  <body>
+
+    <input id="email" type="text" name="" value="">
+    <br><br><br>
+    <p id="validator-message"></p>
+
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script src="lib/validate-email.js"></script>
+    <script type="text/javascript">
+      let email = $('#email')
+      email.keyup(function(){
+        $('#validator-message').emailChecker(email.val())
+      })
+    </script>
+  </body>
+</html>
