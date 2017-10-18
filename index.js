@@ -8,14 +8,15 @@ function validate() {
     // $("#email").valu
     let email = $("#email").val();
     if(validation(email)){
+        $("div").text("It is valid")
         $("#email").css("color", "green")
         $("#email").css("border", "2px")
     } else {
-        $("div").append("It is not valid")
+        $("div").text("It is not valid")
         $("#email").css("color", "red")
         $("#email").css("border", "3px")
     }
     
 }
 
-$("#button").on("click", validate);
+$("#email").keyup("click", validate);
