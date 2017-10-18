@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input class="email" type="text" name="" value="" placeholder="inser your email here">
+    <input class="hidemsg" type="text" name="" value="" style="border: 0px solid #000000;">
+
+  </body>
+  <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+  <script src="lib/validate-email.js"></script>
+  <script>
+        $("input.email").keyup(function( event ) {
+          $("input.email").isEmail()
+        });
+
+    </script>
+</html>
