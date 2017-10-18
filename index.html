@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>I'm client</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/validate-email.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(e) {
+        $('#txt_email').keyup(function() {
+          var sEmail = $('#txt_email').val();
+          // console.log('panjang',$(this).length);
+          $(this).css('border', function(){
+            if (validateEmail(sEmail)) {
+              return '2px solid #0F0';
+            }
+            else {
+              return '2px solid #f44242';
+            }
+            if (length == 0) {
+              return '2px solid #000';
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>I'm a Live</h1>
+    Email : <br>
+    <input type='text' id='txt_email'/><br/>
+  </body>
+</html>
