@@ -8,11 +8,7 @@
     <title>My Jquery plugin</title>
     <style>
         .inputbox[type=text] {
-            width: 180px;
-            height: 19px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 2px solid grey;
+            border: 2px solid blue;
             border-radius: 2px;
         }
     </style>
@@ -20,10 +16,15 @@
 <body>
     <form name="iniForm">
         <p>Enter email:</p>
-        <input type="text" id='email' name="emailInput" class="inputbox">
+        <input 
+        type="text" 
+        id='email' 
+        name="emailInput" 
+        class="inputbox" 
+        style="border: 2px solid blue;border-radius: 2px;">
     </form>
     
     <h2 id='validationText'></h2>
 </body>
-<script src="/index.js"</script>
+<script src="/index.js"></script>
 </html>

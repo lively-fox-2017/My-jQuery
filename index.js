@@ -5,11 +5,10 @@ function validateEmail(email) {
 
 function validate() {
     $("#validationText").text("")
-    var ifEmpty = document.forms["iniForm"]["emailInput"].value
     var email = $("#email").val()
 
-    if (ifEmpty == "") {
-        $(".inputbox").css("border", "2px solid grey")
+    if (document.forms["iniForm"]["emailInput"].value == "") {
+        $(".inputbox").css("border", "2px solid blue")
     } else if (validateEmail(email)) {
         $("#validationText").css("color", "green")
         $(".inputbox").css("border", "2px solid green")
